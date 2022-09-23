@@ -1,0 +1,211 @@
+{
+	"info": {
+		"_postman_id": "36c8f789-fe83-4af2-9e4e-1a2868b9179c",
+		"name": "Library",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "8852734"
+	},
+	"item": [
+		{
+			"name": "Import Data",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"type": "file",
+							"src": "/Users/sibgha/Downloads/books.csv"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{BASE_URL}}/csv/upload_books",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"csv",
+						"upload_books"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Megazines By Author",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{BASE_URL}}/megazines?author_email=pr-walter@optivo.de",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"megazines"
+					],
+					"query": [
+						{
+							"key": "author_email",
+							"value": "pr-walter@optivo.de"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Books By Author",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{BASE_URL}}/available_books",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"available_books"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Books",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{BASE_URL}}/available_books",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"available_books"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Megazines",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{BASE_URL}}/megazines?author_email=pr-ferdinand@optivo.de&sort_by=title",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"megazines"
+					],
+					"query": [
+						{
+							"key": "author_email",
+							"value": "pr-ferdinand@optivo.de"
+						},
+						{
+							"key": "sort_by",
+							"value": "title"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Megazines  Sorted by Title",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{BASE_URL}}/available_books",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"available_books"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Books  Sorted by Title",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{BASE_URL}}/available_books",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"available_books"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Book by ISBN",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{BASE_URL}}/book?isbn=5554-5545-4518",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"book"
+					],
+					"query": [
+						{
+							"key": "isbn",
+							"value": "5554-5545-4518"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Megazine by ISBN",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{BASE_URL}}/books_by_borrower?userId=190&fromDate=27.02.2011&toDate=08.08.2022",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"books_by_borrower"
+					],
+					"query": [
+						{
+							"key": "userId",
+							"value": "190"
+						},
+						{
+							"key": "fromDate",
+							"value": "27.02.2011",
+							"description": "."
+						},
+						{
+							"key": "toDate",
+							"value": "08.08.2022"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
